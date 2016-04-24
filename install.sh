@@ -1,8 +1,8 @@
-npm install gulp
-npm install gulp-sass
-npm install gulp-jade
-npm install gulp-stylus
-npm install gulp-connect
+npm install --save-dev gulp
+npm install --save-dev gulp-sass
+npm install --save-dev gulp-jade
+npm install --save-dev gulp-stylus
+npm install --save-dev gulp-connect
 mkdir build
 mkdir build/styles
 mkdir build/fonts
