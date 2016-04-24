@@ -2,5 +2,12 @@
 
 ###Install
 
-Just type
-    sh install.sh
+```bash
+    $ sh install.sh
+```
+
+###Run
+
+```bash
+    $ gulp
+```
