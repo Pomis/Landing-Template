@@ -1,3 +1,14 @@
+/*
+	1. компилировать jade -> html
+	2. сжимать html
+	3. компилировать Stylud -> css
+	4. ставить перфексы для браузеров в css
+	5. сжать css
+	6. сжать все js файлы
+*/
+
+
+
 var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	sass = require('gulp-sass'),
