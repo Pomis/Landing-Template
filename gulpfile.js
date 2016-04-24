@@ -61,5 +61,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-	gulp.start('connect', 'watch');
+	gulp.start('connect', 'watch', 'sass', 'jade');
 });
