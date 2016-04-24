@@ -7,13 +7,11 @@
 	6. сжать все js файлы
 */
 
-
-
-var gulp = require('gulp'),
-	jade = require('gulp-jade'),
-	sass = require('gulp-sass'),
-	stylus = require('gulp-stylus'),
-	connect = require('gulp-connect');
+var gulp = require('gulp'),				// Gulp
+	jade = require('gulp-jade'), 		// шаблонизатор для html
+	sass = require('gulp-sass'), 		// препроцессор css
+	stylus = require('gulp-stylus'),	// препроцессор css
+	connect = require('gulp-connect'); 	// локальный сервер для быстрого просмотра имзменений в файлах
 
 // server
 gulp.task('connect', function() {
@@ -42,24 +40,25 @@ gulp.task('sass', function() {
 // stylus
 gulp.task('stylus', function() {
 	return gulp.src('src/styles/*.styl')
-    	.pipe(stylus())
-    	.pipe(gulp.dest('build/styles/'));
-});
-
-// less
-gulp.task('less', function() {
+    	.pipe(stylus({compress: true}))
+    	.pipe(gulp.dest('build/styles/')),
+    	.pipe(connect.reload());
 });
 
 // js
 gulp.task('js', function() {
+
 });
 
 // watch
 gulp.task('watch', function() {
 	gulp.watch('src/*.jade', ['jade']);
 	gulp.watch('src/styles/*.scss', ['sass']);
+	gulp.watch('src/styles/*.styl', ['stylus']);
+	gulp.watch('src/scripts/*.js', ['js']);
+
 });
 
 gulp.task('default', function() {
-	gulp.start('connect', 'watch', 'sass', 'jade');
+	gulp.start('connect', 'watch', 'jade', 'sass', 'stylus', 'js');
 });
