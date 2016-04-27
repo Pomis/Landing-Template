@@ -41,8 +41,8 @@ gulp.task('sass', function() {
 gulp.task('stylus', function() {
 	return gulp.src('src/styles/*.styl')
     	.pipe(stylus({compress: true}))
-    	.pipe(gulp.dest('build/styles/')),
-    	.pipe(connect.reload());
+    	.pipe(gulp.dest('build/styles/'))//,
+    	//.pipe(connect.reload());
 });
 
 // js
