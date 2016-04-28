@@ -1,10 +1,52 @@
 /*
-	1. компилировать jade -> html
-	2. сжимать html
-	3. компилировать Stylud -> css
-	4. ставить перфексы для браузеров в css
-	5. сжать css
-	6. сжать все js файлы
+	1. бидл по шаблону.
+		.footer.jade
+		.header.jade
+		.content.jade
+			-> page+number.html
+	2. сжатие всех .html
+	3. билд index.jade -> index.php (в корне каталога)
+	4. сжатие index.php
+	5. компиляция всех .Styus -> .css
+	6. объединение всех .css
+	7. сжатие всех .css
+	8. объединение всех .js
+	9. сжатие всех .js 
+
+	# file sys
+		build/
+			imgs
+			styles/
+				style.min.css
+			scripts/
+				script.min.css
+			pages/
+				page.html
+			index.php
+		scr/
+			imgs/
+				image.png
+			styles/
+				style0.styl
+				style1.styl
+			scripts/
+				script0.js
+				script1.js
+			pages/
+				page0.jade
+				page1.jade
+			template/
+				header.jade
+				footer.jade
+			index.jade #routing
+		node_modules
+		gruntfile.js
+		package.json
+		.gitignore
+		install.sh
+		README.md
+
+
 */
 
 var gulp = require('gulp'),				// Gulp
