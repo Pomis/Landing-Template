@@ -2,6 +2,10 @@
   "name": "sevapp",
   "version": "0.0.1",
   "devDependencies": {
+  	"gulp-connect": "^3.2.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-sass": "^2.3.1",
     "gulp": "^3.9.1",
     "gulp-stylus": "^2.3.1"
   }
